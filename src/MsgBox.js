@@ -1,6 +1,7 @@
 /**
  * Created by jacky on 2016/7/9.
  */
+import 'bootstrap/js/modal.js';
 
 export function alert(msg){
     const dialog=buildDialog('消息提示',msg);

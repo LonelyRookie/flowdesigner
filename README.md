@@ -1,3 +1,5 @@
+该项目从 https://github.com/jacky6024/flowdesigner 复制过来进行BUG的修复
+
 # FlowDesigner简介
 FlowDesigner 是一套可以在网页中使用的基础JS绘图库，采用ES6语法编写，支持除IE以外所有浏览器,使用它可以快速绘制出各种类型的由节点和连线构成的流程图。
 在线DEMO：http://58.246.62.194:16808/flow-designer-demo/
@@ -117,4 +119,26 @@ designer.addButton({
 URule规则引擎决策流源码地址：http://git.oschina.net/youseries/urule 这里的决策流就是基于FlowDesigner项目实现。
 
 UFLO中提供的网页版流程设计器也是基于flowdesigner实现：http://git.oschina.net/youseries/uflo
+
+---
+
+安装webpack4.x
+
+```shell
+npm i -D webpack@4.41.6 webpack-cli@3.3.11 webpack-dev-server
+```
+
+
+# Babel6.x编译JS文件
+```shell
+babel -c -d ./lib ./src/ --presets env
+# 将位于 ./src/ 目录下的 JavaScript 代码编译为兼容指定环境的代码，
+# 并将编译结果输出到 ./lib 目录中。其中使用了环境预设 env 来确定所需的转换和插件。
+
+```
+
+
+# BUG
+调用`MsgBox.alert()`函数的时候，出现： `Uncaught TypeError: dialog.modal is not a function` 这个问题。
+
 

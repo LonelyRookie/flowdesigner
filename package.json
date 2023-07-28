@@ -5,13 +5,14 @@
   "main": "index.js",
   "scripts": {
     "build": "babel -c -d ./lib ./src/ --presets env",
-    "prepublish": "npm run build"
+    "prepublish": "npm run build",
+    "dev": "webpack -d source-map --watch"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/jacky6024/flowdesigner.git"
+    "url": "https://github.com/LonelyRookie/flowdesigner.git"
   },
-  "author": "Jacky.Gao",
+  "author": "xxxxxx",
   "license": "MIT",
   "dependencies": {
     "bootstrap": "^3.3.6",
@@ -29,6 +30,8 @@
     "expose-loader": "^0.7.5",
     "file-loader": "^1.1.11",
     "style-loader": "^0.13.1",
-    "url-loader": "^0.5.7"
+    "url-loader": "^0.5.7",
+    "webpack": "^4.41.6",
+    "webpack-cli": "^3.3.11"
   }
 }
