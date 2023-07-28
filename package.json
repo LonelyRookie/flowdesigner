@@ -5,8 +5,7 @@
   "main": "index.js",
   "scripts": {
     "build": "babel -c -d ./lib ./src/ --presets env",
-    "prepublish": "npm run build",
-    "dev": "webpack -d source-map --watch"
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
